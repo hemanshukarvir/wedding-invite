@@ -9,7 +9,7 @@ export default function CountdownSlide() {
 		<section
 	  className="countdown-slide"
 	  style={{
-		backgroundImage: 'url("/countdown.jfif")',
+		backgroundImage: 'url("/countdown_gif.gif")',
 	  }}
 	>
       <div className="countdown-overlay"></div>

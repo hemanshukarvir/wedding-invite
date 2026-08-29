@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Italianno&family=Parisienne&display=swap');
 
 * {
   box-sizing: border-box;
@@ -190,10 +192,10 @@ body {
 .hero-small-text {
   margin: 0;
 
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", cursive;
 
-  font-size: 12px;
-
+  font-size: 13px;
+  font-weight: bolder;
   letter-spacing: 0.2em;
 
   line-height: 1.4;
@@ -268,7 +270,7 @@ body {
 
   padding: 8px 0;
 
-  font-family: "Great Vibes", cursive;
+  font-family: "Italianno", cursive;
 
   font-size: clamp(48px, 15vw, 64px);
 
@@ -526,7 +528,7 @@ body {
 .event-heading {
   margin: 0;
 
-  font-family: "Great Vibes", cursive;
+  font-family: "Italianno", cursive;
 
   font-size: 62px;
 

@@ -75,12 +75,42 @@ function App() {
 
   return (
     <>
-      {!inviteOpen ? (
-        <EnvelopeIntro
-          onComplete={() => setInviteOpen(true)}
-        />
+    <AnimatePresence mode="sync">
+     {!inviteOpen ? (
+        <motion.div
+          key="envelope-screen"
+          exit={{
+            opacity: 0,
+            scale: 1.03,
+            filter: "blur(2px)",
+          }}
+          transition={{
+            duration: 0.65,
+            ease: "easeInOut",
+          }}
+        >
+          <EnvelopeIntro
+            onComplete={() => setInviteOpen(true)}
+          />
+        </motion.div>
       ) : (
-        <>
+        <motion.div
+          key="wedding-invitation"
+          initial={{
+            opacity: 0,
+            scale: 0.985,
+            y: 10,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 2.2,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
           {/* Scroll progress */}
           <motion.div
             style={{
@@ -118,12 +148,25 @@ function App() {
             label="THE FIRST HUES OF LOVE"
             heading="Mehendi"
             headingColor="#1e5c2a"
-            description="Begin the celebrations with henna, music, laughter and beautiful memories."
+            description="Begin the celebrations with mehendi, music, laughter and beautiful memories."
             date="18 February 2027"
             venue="Mira Road"
-            backgroundImage="/mehendi.jfif"
-            backgroundPosition="center bottom"
+            backgroundImage="/mehendi_gif.gif"
+            backgroundPosition="bottom center"
             mapsUrl="https://www.google.com/maps/search/?api=1&query=Mira+Road+Mumbai"
+          />
+
+          <EventSlide
+            label="A DAY OF SUNSHINE & JOY"
+            heading="Haldi"
+            headingColor="#7a4e00"
+            description="A joyful celebration filled with colour, laughter and the warmth of our loved ones."
+            date="20 February 2027"
+            time="9:00 AM Onwards"
+            venue="Mumbai"
+            backgroundImage="/haldi_gif.gif"
+            backgroundPosition="center bottom"
+            mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
           />
 
 
@@ -133,37 +176,25 @@ function App() {
             headingColor="#6b1e48"
             description="An evening of love, laughter, cocktails and the beginning of our forever."
             date="20 February 2027"
-            time="7:00 PM"
+            time="7:00 PM Onwards"
             venue="Mumbai"
-            backgroundImage="/engagement.jfif"
+            backgroundImage="/engagement_gif.gif"
             backgroundPosition="center center"
             mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
           />
 
 
-          <EventSlide
-            label="A DAY OF SUNSHINE & JOY"
-            heading="Haldi"
-            headingColor="#7a4e00"
-            description="A joyful celebration filled with colour, laughter and the warmth of our loved ones."
-            date="20 February 2027"
-            time="9:00 AM"
-            venue="Mumbai"
-            backgroundImage="/haldi.jfif"
-            backgroundPosition="center bottom"
-            mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
-          />
-
+          
 
           <EventSlide
             label="THE BEGINNING OF FOREVER"
             heading="The Wedding"
             headingColor="#5a3200"
-            description="Join us as we begin our forever surrounded by the people we love."
+            description="Join us as we begin OUR FOREVER, surrounded by the people we love."
             date="21 February 2027"
             time="12:23 PM"
             venue="The Sea Coast Farm & Cafe, Virar (W)"
-            backgroundImage="/wedding.jfif"
+            backgroundImage="/wedding_gif.gif"
             backgroundPosition="center center"
             mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
           />
@@ -175,15 +206,16 @@ function App() {
             headingColor="#5a3200"
             description="Come celebrate our new beginning with an evening filled with love, laughter and cherished memories."
             date="21 February 2027"
-            time="7:00 PM"
+            time="7:00 PM Onwards"
             venue="Mumbai"
-            backgroundImage="/reception.jfif"
+            backgroundImage="/reception_gif.gif"
             backgroundPosition="center center"
             mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
           />
-        </>
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
+  </>
   );
 }
 

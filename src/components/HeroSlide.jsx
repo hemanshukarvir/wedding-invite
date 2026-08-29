@@ -24,13 +24,13 @@ export default function HeroSlide() {
           transition={{ duration: 1 }}
         >
           <p className="hero-small-text">
-            TOGETHER WITH THEIR FAMILIES
+            WITH THE DIVINE BLESSINGS OF OUR FAMILIES
           </p>
 
           <div className="hero-divider"></div>
 
           <p className="hero-small-text">
-            REQUEST THE PLEASURE OF YOUR COMPANY
+            WE CORDIALLY INVITE YOU TO JOIN US IN CELEBRATING WEDDING OF
           </p>
         </motion.div>
 

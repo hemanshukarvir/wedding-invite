@@ -11,7 +11,7 @@ export default function EnvelopeIntro({ onComplete }) {
 
     setTimeout(() => {
       onComplete();
-    }, 1200);
+    }, 850);
   };
 
   return (
@@ -57,7 +57,7 @@ export default function EnvelopeIntro({ onComplete }) {
           className="tap-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.1 }}
         >
           TAP TO OPEN
         </motion.p>
