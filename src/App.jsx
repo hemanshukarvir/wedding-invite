@@ -212,6 +212,19 @@ function App() {
             backgroundPosition="center center"
             mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Sea+Coast+Farm+%26+Cafe+Virar"
           />
+
+          <EventSlide
+            label="WITH LOVE & GRATITUDE"
+            heading="Thank You"
+            headingColor="#5a3200"
+            date="Capture beautiful memories? Share with us using the QR code below"
+            description="Your presence and blessings mean the world to us. We can’t wait to celebrate this beautiful beginning with you."
+            backgroundImage="/thank_you.gif"
+            backgroundPosition="center center"
+            qrImage="/qr_code.png"
+            qrAlt="Google Photos QR code"            
+            showDateIcon={false}
+            showDescriptionDivider={true}          />
         </motion.div>
       )}
     </AnimatePresence>

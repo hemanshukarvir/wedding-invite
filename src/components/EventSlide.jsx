@@ -5,12 +5,15 @@ export default function EventSlide({
   heading,
   date,
   time,
-  venue,
   description,
   headingColor,
   mapsUrl,
   backgroundImage,
   backgroundPosition = "center center",
+  qrImage,
+  qrAlt = "QR code",
+  showDateIcon = true,
+  showDescriptionDivider = false,
 }) {
   return (
     <section
@@ -46,22 +49,20 @@ export default function EventSlide({
           {description}
         </p>
 
-        <div className="event-details">
+        {showDescriptionDivider && <div className="event-description-line" />}
 
+        <div className="event-details">
           <div className="event-detail">
-            <span className="event-icon">✦</span>
+            {showDateIcon && <span className="event-icon">✦</span>}
             <span>{date}</span>
           </div>
 
           {time && (
             <div className="event-detail">
-              <span className="event-icon">◷</span>
+              {showDateIcon && <span className="event-icon">◷</span>}
               <span>{time}</span>
             </div>
           )}
-
-          
-
         </div>
 
         {mapsUrl && (
@@ -73,6 +74,12 @@ export default function EventSlide({
           >
             VIEW LOCATION
           </a>
+        )}
+
+        {qrImage && (
+          <div className="qr-section">
+            <img src={qrImage} alt={qrAlt} className="qr-image" />
+          </div>
         )}
       </motion.div>
     </section>
