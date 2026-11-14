@@ -143,7 +143,7 @@ function App() {
 
           <CountdownSlide />
 
-
+          
           <EventSlide
             label="THE FIRST HUES OF LOVE"
             heading="Mehendi"
@@ -221,7 +221,7 @@ function App() {
             description="Your presence and blessings mean the world to us. We can’t wait to celebrate this beautiful beginning with you."
             backgroundImage="/thank_you.gif"
             backgroundPosition="center center"
-            qrImage="/qr_code.png"
+            qrImage="/wedding_qr_code.jpeg"
             qrAlt="Google Photos QR code"            
             showDateIcon={false}
             showDescriptionDivider={true}          />

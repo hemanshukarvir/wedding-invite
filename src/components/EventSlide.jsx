@@ -78,7 +78,9 @@ export default function EventSlide({
 
         {qrImage && (
           <div className="qr-section">
-            <img src={qrImage} alt={qrAlt} className="qr-image" />
+            <a href="https://photos.app.goo.gl/DAQVx5hZQaRv1std7" target="_blank" rel="noopener noreferrer">
+              <img src={qrImage} alt={qrAlt} className="qr-image" />
+            </a>
           </div>
         )}
       </motion.div>
